@@ -131,12 +131,12 @@ $('document').ready(function(){
 		});
 	});
 
-	/*$('#light_candle').click(function(){
+	$('#light_candle').click(function(){
 		$('.fuego').fadeIn('slow');
 		$(this).fadeOut('slow').promise().done(function(){
 			$('#wish_message').fadeIn('slow');
 		});
-	});*/
+	});
 
 		
 	$('#wish_message').click(function(){
@@ -159,9 +159,9 @@ $('document').ready(function(){
 		$('#b77').animate({top:240, left: vw+250},500);
 		$('.balloons').css('opacity','0.9');
 		$('.balloons h2').fadeIn(3000);
-		$(this).fadeOut('slow').delay(3000).promise().done(function(){
+		/*$(this).fadeOut('slow').delay(3000).promise().done(function(){
 			$('#story').fadeIn('slow');
-		});
+		});*/
 	});
 	
 	$('#story').click(function(){
