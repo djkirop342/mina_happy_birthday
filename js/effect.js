@@ -131,12 +131,12 @@ $('document').ready(function(){
 		});
 	});
 
-	$('#light_candle').click(function(){
+	/*$('#light_candle').click(function(){
 		$('.fuego').fadeIn('slow');
 		$(this).fadeOut('slow').promise().done(function(){
 			$('#wish_message').fadeIn('slow');
 		});
-	});
+	});*/
 
 		
 	$('#wish_message').click(function(){
