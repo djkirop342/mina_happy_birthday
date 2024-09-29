@@ -1,15 +1,23 @@
 $(window).load(function(){
 	$('.loading').fadeOut('fast');
-	// $('.container').fadeIn('fast');
-
-	var countDown = new IOWA.CountdownTimer.Core(
-		new Date(Date.now() + 10*24*60*60*1000),
-		document.querySelector('countdown-timer')
-	);
 	
-	countDown.setUp(false);
-	countDown.attachEvents();
-	countDown.play(false);
+	var targetDate = new Date(2024, 9, 17); // 2024년 10월 17일
+	var currentDate = new Date(); // 현재 시간
+
+	if (currentDate > targetDate) {
+		// 10월 17일보다 시간이 클 경우 .container를 페이드 인
+		$('.container').fadeIn('fast');
+	} else {
+		// 10월 17일보다 시간이 작을 경우 타이머를 설정
+		var countDown = new IOWA.CountdownTimer.Core(
+			targetDate,
+			document.querySelector('countdown-timer')
+		);
+		
+		countDown.setUp(false);
+		countDown.attachEvents();
+		countDown.play(false);
+	}
 });
 $('document').ready(function(){
 	var vw;
