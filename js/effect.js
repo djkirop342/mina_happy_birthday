@@ -3,7 +3,7 @@ $(window).load(function(){
 
 	var targetDate = new Date(2024, 9, 17); // 2024년 10월 17일
 	var currentDate = new Date(); // 현재 시간
-	var devTest = false // 테스트를 위한 변수
+	var devTest = true // 테스트를 위한 변수
 
 	if (currentDate >= targetDate || devTest) {
 		// 10월 17일보다 시간이 클 경우 .container를 페이드 인
