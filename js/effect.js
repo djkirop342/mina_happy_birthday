@@ -5,7 +5,7 @@ $(window).load(function(){
 	var currentDate = new Date(); // 현재 시간
 	var devTest = false // 테스트를 위한 변수
 
-	if (currentDate > targetDate || devTest) {
+	if (currentDate >= targetDate || devTest) {
 		// 10월 17일보다 시간이 클 경우 .container를 페이드 인
 		$('.container').fadeIn('fast');
 	} else {
