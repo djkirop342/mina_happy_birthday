@@ -1,11 +1,20 @@
 $(window).load(function(){
 	$('.loading').fadeOut('fast');
-	$('.container').fadeIn('fast');
+	// $('.container').fadeIn('fast');
+
+	var countDown = new IOWA.CountdownTimer.Core(
+		new Date(Date.now() + 10*24*60*60*1000),
+		document.querySelector('countdown-timer')
+	);
+	
+	countDown.setUp(false);
+	countDown.attachEvents();
+	countDown.play(false);
 });
 $('document').ready(function(){
 	var vw;
 	$(window).resize(function(){
-			vw = $(window).width()/2;
+		vw = $(window).width()/2;
 		$('#b1,#b2,#b3,#b4').stop();
 		$('#b11').animate({top:200, left: vw-165},500);
 		$('#b22').animate({top:200, left: vw-80},500);
